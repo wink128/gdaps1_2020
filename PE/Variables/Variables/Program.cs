@@ -8,14 +8,18 @@ namespace Variables
 {
     class Program
     {
+        // Cie Thompson
+        // 1/24/20
+        // Variables PE
+
         static void Main(string[] args)
         {
             // variable declaration/initialization
             string playerName = "Alex";
-            int startingResources = 100;
+            const int startingResources = 100;
             int currentResources= 100;
-            int shipPrice = 70;
-            int weaponUpgrade = 16;
+            const int shipPrice = 70;
+            const int weaponUpgrade = 16;
             const int AmountEarnedPerKill = 5;
             const int MissileCost = 4;
 
