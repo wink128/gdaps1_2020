@@ -14,7 +14,6 @@ namespace Casting_Math_n_Documentation
 
         static void Main(string[] args)
         {
-            /*
             // Addition
             Console.WriteLine("ADDITION");
             Console.Write("Enter a floating-point number: ");
@@ -54,9 +53,7 @@ namespace Casting_Math_n_Documentation
             Console.WriteLine("The absolute value of {0} is {1}.",
                 num4, absVal);
             Console.WriteLine();
-            */
 
-            /*
             // Taxes
             Console.WriteLine("TAX CALCULATION");
             Console.Write("Enter a price between $0 and $10): ");
@@ -65,18 +62,18 @@ namespace Casting_Math_n_Documentation
             double priceAfterTax = price + tax;
             int dollarPortion = (int)priceAfterTax;
             double centPortion = (priceAfterTax - dollarPortion);
-            Console.WriteLine("${0} with NY sales tax applied is ${1}.",
+            Console.WriteLine("${0} with NY sales tax applied is ${1:F2}.",
                 price, priceAfterTax);
             Console.WriteLine("The dollar portion is {0}.", dollarPortion);
-            Console.WriteLine("The cent portion is {0}.", centPortion);
+            Console.WriteLine("The cent portion is {0:F2}.", centPortion);
             Console.WriteLine(); 
-            */
-
+            
             // Rounding
             Console.WriteLine("ROUNDING");
             Console.Write("Enter a floating-point number: ");
             double num5 = double.Parse(Console.ReadLine());
-            Console.WriteLine("{0} rounds to {1}");
+            double rounded = Math.Round(num5);
+            Console.WriteLine("{0} rounds to {1}", num5, rounded);
             Console.WriteLine();
 
             // Comparison
@@ -85,9 +82,12 @@ namespace Casting_Math_n_Documentation
             double num6 = double.Parse(Console.ReadLine());
             Console.Write("Enter another number: ");
             double num7 = double.Parse(Console.ReadLine());
-            Console.WriteLine("{0} is the larger value.");
+            double comparison = Math.Max(num6, num7);
+            Console.WriteLine("{0} is the larger value.", comparison);
             Console.WriteLine();
 
+            // For Debug
+            Console.ReadLine();
         }
     }
 }
