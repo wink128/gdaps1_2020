@@ -84,7 +84,6 @@ namespace Casting_Math_n_Documentation
             double num7 = double.Parse(Console.ReadLine());
             double comparison = Math.Max(num6, num7);
             Console.WriteLine("{0} is the larger value.", comparison);
-            Console.WriteLine();
 
             // For Debug
             Console.ReadLine();
