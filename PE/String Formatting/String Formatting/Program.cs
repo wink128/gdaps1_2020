@@ -14,7 +14,6 @@ namespace String_Formatting
 
         static void Main(string[] args)
         {
-            /*
             // Name Analysis
             Console.Write("I'd like to analyze your first name. What is it? ");
             Console.ForegroundColor = ConsoleColor.DarkRed;
@@ -25,12 +24,12 @@ namespace String_Formatting
             string nameLower = name.ToLower();
             Console.WriteLine("Your name is also {0}", nameLower);
             Console.WriteLine("It has {0} letters.", name.Length);
-            Console.WriteLine("The first letter of your name is {0}",
+            Console.WriteLine("The first letter of your name is \"{0}\"",
                 name.Substring(0, 1));
-            Console.WriteLine("The last letter of your name is {0}",
+            Console.WriteLine("The last letter of your name is \"{0}\"",
                 name.Substring((name.Length)-1,name.Length));
             Console.WriteLine();
-            */
+            
             // ToString()
             Console.Write("Enter a number with a decimal value: ");
             Console.ForegroundColor = ConsoleColor.DarkRed;
