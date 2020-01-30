@@ -27,7 +27,7 @@ namespace String_Formatting
             Console.WriteLine("The first letter of your name is \"{0}\"",
                 name.Substring(0, 1));
             Console.WriteLine("The last letter of your name is \"{0}\"",
-                name.Substring((name.Length)-1,name.Length));
+                name.Substring((name.Length)-1, (name.Length)-2));
             Console.WriteLine();
             
             // ToString()
