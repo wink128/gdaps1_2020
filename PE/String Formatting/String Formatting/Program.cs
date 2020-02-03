@@ -34,22 +34,23 @@ namespace String_Formatting
             Console.Write("Enter a number with a decimal value: ");
             Console.ForegroundColor = ConsoleColor.DarkRed;
             double decimalValue = double.Parse(Console.ReadLine());
+            int intVal = (int)decimalValue;
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine("\nHere are your results using the ToString() method:");
             Console.WriteLine("{0}\n{1}\n{2}\n", 
                 decimalValue.ToString("F2"),
                 decimalValue.ToString("P4"),
-                decimalValue.ToString("F0"));
+                intVal);
 
             // String.Format()
             Console.WriteLine("Here are your results using the String.Format() method:");
-            string newString = String.Format("{0:F2}\n{1:P4}\n{2:F0}\n",
-                decimalValue, decimalValue, decimalValue);
+            string newString = String.Format("{0:F2}\n{1:P4}\n{2}\n",
+                decimalValue, decimalValue, intVal);
             Console.WriteLine(newString);
 
             // Console.WriteLine()
             Console.WriteLine("Here are your results using the Console.WriteLine() method:");
-            Console.WriteLine("{0:F2}\n{1:P4}\n{2:F0}\n", decimalValue, decimalValue, decimalValue);
+            Console.WriteLine("{0:F2}\n{1:P4}\n{2}\n", decimalValue, decimalValue, intVal);
         }
     }
 }
