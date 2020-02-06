@@ -16,7 +16,7 @@ namespace Compound_Ifs_n_switches
         {
             string input;
             string choice;
-            string facecard;
+            
 
             do
             {
@@ -26,6 +26,7 @@ namespace Compound_Ifs_n_switches
                 
                 string capital;
                 string leftoverLetters;
+                string facecard = "";
 
                 // this will change all card numbers into ints.
                 switch (input)
@@ -68,30 +69,31 @@ namespace Compound_Ifs_n_switches
                 capital = input.Substring(0, 1).ToUpper();
                 leftoverLetters = input.Substring(1, input.Length - 1);
                 string suit = capital + leftoverLetters;
-
-                // valid or invalid
-                switch (number)
+                
+                // valid or invalid number
+                if (number >= 2 && number <= 10)
                 {
-                    case 1:
-                    case 2:
-                    case 3:
-                    case 4:
-                    case 5:
-                    case 6:
-                    case 7:
-                    case 8:
-                    case 9:
-                    case 10:
-                        Console.WriteLine("The card number {0} is valid", number);
-                        break;
-
-                    case 11:
-                    case 12:
-                    case 13:
-                    case 14:
-                        Console.WriteLine("The card number {0} is valid", facecard);
-                        break;
+                    Console.WriteLine("The card number {0} is valid", number);
                 }
+                else if (number > 10 && number < 15)
+                {
+                    Console.WriteLine("The card number {0} is valid", facecard);
+                }
+                else
+                {
+                    Console.WriteLine("The card number {0} is invalid", number);
+                }
+                
+                // Valid or invalid
+                if (input == "heart" || input == "diamonds" || input == "clubs" || input == "spades")
+                {
+                    Console.WriteLine("The card suit {0} is valid", suit);
+                }
+                else
+                {
+                    Console.WriteLine("The card suit {0} is invalid", suit);
+                }
+
                 Console.WriteLine();
 
                 // to loop and break out of the loop
@@ -105,10 +107,20 @@ namespace Compound_Ifs_n_switches
                 else if (choice == "N")
                 {
                     Console.WriteLine("Goodbye!");
+                    Console.WriteLine();
                     break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input.\n");
+                    Console.Write("Another card? (Y/N): ");
+                    choice = Console.ReadLine().Trim().ToUpper();
                 }
 
             } while (choice == "Y");
+
+            // for debug
+            Console.ReadLine();
         }
     }
 }
