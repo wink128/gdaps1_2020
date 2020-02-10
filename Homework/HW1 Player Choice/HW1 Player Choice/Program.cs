@@ -20,7 +20,7 @@ namespace HW1_Player_Choice
 
             // scene 1
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("_______________________________________________________________________________________________");
+            Console.WriteLine("__________________________________________________________________________________________________");
             Console.WriteLine("SCENE 1 - Choose a Pokemon");
             Console.WriteLine();
             Console.Write("Today's the day. Your 10th birthday. You finally get to choose your " +
@@ -59,7 +59,7 @@ namespace HW1_Player_Choice
 
             // scene 2
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("_______________________________________________________________________________________________");
+            Console.WriteLine("__________________________________________________________________________________________________");
             Console.WriteLine("SCENE 2 - Afternoon Adventure");
             Console.WriteLine();
             Console.WriteLine("While walking with your new beloved pokemon, you both seem to be " +
@@ -68,7 +68,7 @@ namespace HW1_Player_Choice
             // scene 2 choices
             if (choice1 == "MAGIKARP")
             {
-                Console.WriteLine("What would you like to do, take a NAP, CONTINUE on your hunt to " +
+                Console.WriteLine("What would you like to do? Take a NAP, CONTINUE on your hunt to " +
                     "catch wild pokemon until\ndark, or ENCOURAGE your gloomy magikarp by showing it " +
                     "the game Magikarp Jump?");
                 Console.WriteLine();
@@ -76,7 +76,7 @@ namespace HW1_Player_Choice
             }
             else
             {
-                Console.WriteLine("What would you like to do, take a NAP, CONTINUE on your hunt to " +
+                Console.WriteLine("What would you like to do? Take a NAP or CONTINUE on your hunt to " +
                     "catch wild pokemon until dark?");
                 Console.WriteLine();
                 Console.Write("> ");
@@ -113,7 +113,7 @@ namespace HW1_Player_Choice
 
             // scene 3
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("_______________________________________________________________________________________________");
+            Console.WriteLine("__________________________________________________________________________________________________");
             Console.WriteLine("SCENE 3 - A Fateful Encounter");
             Console.WriteLine();
             Console.WriteLine("The next day, while walking on your favorite path, you encounter the neighborhood bully\n" +
@@ -140,7 +140,7 @@ namespace HW1_Player_Choice
             }
             else if (pokemon == "magikarp" && medal == 0 && bond == "strong")
             {
-                Console.WriteLine("Because of how much your magikarp trusts you, it did it's very best to win and make you proud!\n" +
+                Console.WriteLine("Because of how much your magikarp trusts you, it triedd it's very best to win and make you proud!\n" +
                     "It worked!");
                 Console.WriteLine();
             }
