@@ -13,7 +13,7 @@ namespace HW1_Player_Choice
         // HW1 Player Choice
         static void Main(string[] args)
         {
-            /*
+            
             // variables used
             string pokemon=null;
             string bond = null; 
@@ -145,22 +145,7 @@ namespace HW1_Player_Choice
                     "It worked!");
                 Console.WriteLine();
             }
-            */
-            Console.Write("Enter a guess between 1 and 10: ");
-            int userGuess = int.Parse(Console.ReadLine());
 
-            if (userGuess == 5)
-            {
-                Console.WriteLine("You guessed it!");
-            }
-            if (userGuess > 5)
-            {
-                Console.WriteLine("Your guess is too high!");
-            }
-            else
-            {
-                Console.WriteLine("Your guess is too low!");
-            }
         }
     }
 }
