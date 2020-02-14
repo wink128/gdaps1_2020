@@ -106,7 +106,7 @@ namespace For_Loops
                 for (int j = 0; j < height; j++)
                 {
                     
-                    if (j==0 || j == width || i==0 || i == height)
+                    if (j==0 || j == width || i==0 || i == height-2)
                     {
                         Console.Write("o");
                     }
