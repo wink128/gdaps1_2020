@@ -8,6 +8,10 @@ namespace HW2_Golf
 {
     class Program
     {
+        // Cie Thompson
+        // 2/20/20
+        // Golf HW
+
         static void Main(string[] args)
         {
             // introduction
@@ -25,7 +29,7 @@ namespace HW2_Golf
             {
 
 
-                Console.WriteLine("Attempt " + attempt + " ----------------------------------");
+                Console.WriteLine("Attempt {0} ----------------------------------", attempt);
 
                 // angle loop
                 double angle;
@@ -66,6 +70,7 @@ namespace HW2_Golf
                     "the ground\n" + distanceTraveled + " meters away.");
                 Console.WriteLine();
 
+                // win/fail conditions
                 if (distanceAway > 1 || distanceAway < -1)
                 {
                     Console.WriteLine("You are " + Math.Abs(distanceAway) + " meters from the target. Try again!");
