@@ -52,7 +52,7 @@ namespace Loops
                         Console.Write("Enter a value between 1 and 100: ");
                         int num3 = int.Parse(Console.ReadLine());
 
-                        while (!(num3>=0 && num3<=100))
+                        while (!(num3>0 && num3<=100))
                         {
                             Console.Write("Value out of range.\n" +
                                 "Enter a value between 1 and 100: ");
