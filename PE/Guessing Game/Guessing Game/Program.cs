@@ -40,7 +40,8 @@ namespace Guessing_Game
                 // Tryparse
                 bool success = int.TryParse(Console.ReadLine().Trim(), out guess);
 
-                while (!success)
+                // validation loop
+                while (!success || guess < 0 || guess > 100)
                 {
                     Console.WriteLine("Invalid input. Try again.");
                     Console.WriteLine();
@@ -48,6 +49,7 @@ namespace Guessing_Game
                     success = int.TryParse(Console.ReadLine().Trim(), out guess);
                 }
 
+                // win/loss conditions
                 if (guess < correct && guess > 0)
                 {
                     Console.WriteLine("Too low");
@@ -64,16 +66,10 @@ namespace Guessing_Game
                 {
                     break;
                 }
-                else
-                {
-                    Console.WriteLine("Invalid input. Try again.");
-                    Console.WriteLine();
-                    Console.Write("Turn #{0}: Enter your guess: ", count);
-                    success = int.TryParse(Console.ReadLine().Trim(), out guess);
-                }
 
             } while (count<=8);
 
+            // actual win/loss dialogue
             if (guess==correct)
             {
                 Console.WriteLine("Correct! You won in {0} turns!", count);
