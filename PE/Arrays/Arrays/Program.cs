@@ -43,26 +43,70 @@ namespace Arrays
                 Console.Write("Enter grade: ");
                 success = double.TryParse(Console.ReadLine().Trim(), out grades[i]);
 
-                while (!success || grades[i] < 0)
+                while (!success || grades[i] < 0 || grades[i] > 100)
                 {
-                    Console.Write("Invalid. Enter a positive number: ");
+                    Console.Write("Invalid. Enter a positive number between 0 and 100: ");
                     success = double.TryParse(Console.ReadLine().Trim(), out grades[i]);
                 }
             }
 
             // Grade report
+            double total = 0;
             Console.WriteLine();
             Console.WriteLine("Grade Report:");
             for (int i = 0; i < numAssignments; i++)
             {
                 Console.WriteLine("\t {0}: {1}", assignments[i], grades[i]);
+                total += grades[i];
             }
 
-            Console.WriteLine("--------------------------------------");
+            Console.WriteLine("-----------------------");
+
+            // average calculations + display
+            double average = total / numAssignments;
+            Console.WriteLine("Final Average: {0}", average);
+            Console.WriteLine();
+
+            // grade replacement index loop
+            int gradeIndex = 0;
+            Console.Write("What is the index of the grade to replace? ");
+            success = int.TryParse(Console.ReadLine().Trim(), out gradeIndex);
+            Console.WriteLine();
+
+            while (!success || gradeIndex < 0 || gradeIndex > numAssignments-1)
+            {
+                Console.WriteLine("Index must be a number between 0 and {0}", numAssignments-1);
+                Console.Write("What is the index of the grade to replace? ");
+                success = int.TryParse(Console.ReadLine().Trim(), out gradeIndex);
+                Console.WriteLine();
+            }
+
+            // grade validation loop
+            Console.Write("What is the new grade? ");
+            success = double.TryParse(Console.ReadLine().Trim(), out grades[gradeIndex]);
+
+            while (!success || grades[gradeIndex] < 0 || grades[gradeIndex] > 100)
+            {
+                Console.Write("Grade must be between 0 and 100. Enter a new grade: ");
+                success = double.TryParse(Console.ReadLine().Trim(), out grades[gradeIndex]);
+            }
+
+            // New grade report
+            total = 0;
+            Console.WriteLine();
+            Console.WriteLine("Grade Report:");
+            for (int i = 0; i < numAssignments; i++)
+            {
+                Console.WriteLine("\t {0}: {1}", assignments[i], grades[i]);
+                total += grades[i];
+            }
+
+            Console.WriteLine("---------------------------------------");
 
             // final average calculations + display
-            Console.WriteLine("Final average: ");
-
+            average = total / numAssignments;
+            Console.WriteLine("Final Average: {0}", average);
+            Console.WriteLine();
         }
     }
 }
