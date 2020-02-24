@@ -50,22 +50,23 @@ namespace Guessing_Game
                 }
 
                 // win/loss conditions
-                if (guess < correct && guess > 0)
+                if (guess == correct)
+                {
+                    break;
+                }
+                else if (guess < correct && guess >= 0)
                 {
                     Console.WriteLine("Too low");
                     Console.WriteLine();
                     count++;
                 }
-                else if (guess > correct && guess < 100)
+                else if (guess > correct && guess <= 100)
                 {
                     Console.WriteLine("Too high");
                     Console.WriteLine();
                     count++;
                 }
-                else if (guess == correct)
-                {
-                    break;
-                }
+                
 
             } while (count<=8);
 
