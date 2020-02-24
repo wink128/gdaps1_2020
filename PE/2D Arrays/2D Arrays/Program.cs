@@ -8,6 +8,10 @@ namespace _2D_Arrays
 {
     class Program
     {
+        // Cie Thompson
+        // 2/24/20
+        // 2D Arrays PE
+
         static void Main(string[] args)
         {
             // RNG
