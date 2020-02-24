@@ -10,6 +10,9 @@ namespace _2D_Arrays
     {
         static void Main(string[] args)
         {
+            // RNG
+            Random rng = new Random();
+            
             // Array declaration + initialization
             char[,] grid = new char[10, 15];
 
@@ -39,6 +42,17 @@ namespace _2D_Arrays
 
             // rng letters
             // the ASCII codes are between 97 and 122
+            for (int i = 0; i < grid.GetLength(0); i++)
+            {
+                for (int j = 0; j < grid.GetLength(1); j++)
+                {
+                    if (grid[i,j]==0)
+                    {
+                        grid[i, j] = (char)rng.Next(97, 123);
+                    }
+                    
+                }
+            }
 
             // Print Grid
             for (int i = 0; i < grid.GetLength(0); i++)
