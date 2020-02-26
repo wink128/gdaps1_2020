@@ -10,8 +10,8 @@ namespace Casting_Math_n_Documentation
     {
         // Cie Thompson
         // 1/27/20
-        // Casting Math and Documentation PE using LOOPS/IF STATEMENTS!
-        // It is now the If Statements PE
+        // Casting Math and Documentation PE using METHODS!
+        // It is now the Methods PE
 
         static void Main(string[] args)
         {
