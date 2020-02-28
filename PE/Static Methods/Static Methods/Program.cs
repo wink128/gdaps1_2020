@@ -192,5 +192,13 @@ namespace Static_Methods
         {
             return num1 + num2;
         }
+
+        /// <summary>
+        /// Gets user input, sanitizes it, and changes text color
+        /// </summary>
+        static void GetUserInput()
+        {
+
+        }
     }
 }
