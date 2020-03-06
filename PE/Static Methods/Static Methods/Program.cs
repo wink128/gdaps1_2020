@@ -20,7 +20,7 @@ namespace Static_Methods
                 PrintMenuOptions();
                 Console.WriteLine();
                 Console.Write("Your Choice: ");
-                choice = GetUserInput();
+                choice = GetUserInput("Your Choice: ");
                 Console.WriteLine();
 
                 switch (choice)
@@ -188,13 +188,13 @@ namespace Static_Methods
         /// <summary>
         /// Gets user input, sanitizes it, and changes text color
         /// </summary>
-        static void GetUserInput(string choice)
+        static string GetUserInput(string choice)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write("Your Choice: ");
+            Console.Write(choice);
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.ReadLine().Trim().ToLower();
-            return choice;
+            string userInput = Console.ReadLine().Trim().ToLower();
+            return userInput;
         }
     }
 }
