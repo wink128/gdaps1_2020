@@ -14,6 +14,9 @@ namespace HW3_Word_Scramble
 
         static void Main(string[] args)
         {
+            // RNG
+            Random rng = new Random();
+
             // 10 words (various pokemon)
             string[] wordBank = new string[10];
             wordBank[0] = "slugma";
@@ -32,7 +35,7 @@ namespace HW3_Word_Scramble
             int score = 0;
             string game = null;
 
-            // Intro/game loop
+            // Intro/game loop ligma
             Console.WriteLine("Welcome to the Word Jumble game!\n");
             Console.Write("Would you like to play? (yes/no) ");
             game = Console.ReadLine().Trim().ToLower();
@@ -48,7 +51,14 @@ namespace HW3_Word_Scramble
 
             while (game != "no") 
             {
-                
+                int randomWord = rng.Next(0, 10);
+                char[] jumbledWord = new char[randomWord];
+
+                // jumble
+                for (int i = 0; i < randomWord; i++)
+                {
+                    jumbledWord[i]=help
+                }
                 
                 // Play again?
                 Console.Write("Would you like to play again? ");
