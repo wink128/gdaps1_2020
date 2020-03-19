@@ -20,7 +20,7 @@ namespace Static_Methods
                 PrintMenuOptions();
                 Console.WriteLine();
                 Console.Write("Your Choice: ");
-                choice = Console.ReadLine().Trim().ToLower();
+                choice = GetUserInput("Your Choice: ");
                 Console.WriteLine();
 
                 switch (choice)
@@ -28,18 +28,10 @@ namespace Static_Methods
                     case "addition":
 
                         // Addition
-                        Console.ForegroundColor = ConsoleColor.DarkCyan;
                         Console.WriteLine("ADDITION");
-                        Console.ForegroundColor = ConsoleColor.Gray;
-                        Console.Write("Enter a floating-point number: ");
-                        double num1 = double.Parse(Console.ReadLine());
-                        int castedInt1 = (int)num1;
-                        Console.Write("Enter another floating-point number: ");
-                        double num2 = double.Parse(Console.ReadLine());
-                        int castedInt2 = (int)num2;
-                        int sum = castedInt1 + castedInt2;
-                        Console.WriteLine("Let's add the whole number portions. " +
-                            "{0} + {1} = {2}", castedInt1, castedInt2, sum);
+                        int num1 = GetIntFromDouble();
+                        int num2 = GetIntFromDouble();
+                        Addition(num1, num2);
                         Console.WriteLine();
                         Console.WriteLine("----------------------------------------------------------");
                         break;
@@ -196,9 +188,13 @@ namespace Static_Methods
         /// <summary>
         /// Gets user input, sanitizes it, and changes text color
         /// </summary>
-        static void GetUserInput()
+        static string GetUserInput(string choice)
         {
-
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(choice);
+            Console.ForegroundColor = ConsoleColor.Green;
+            string userInput = Console.ReadLine().Trim().ToLower();
+            return userInput;
         }
     }
 }
