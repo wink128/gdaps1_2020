@@ -13,15 +13,16 @@ namespace HW5_Character_Behaviors
         protected int strength;
         protected int dexterity;
         protected int level;
-        protected Random rng = new Random();
+        protected Random rng;
 
         // Constructor
-        public CommonCharacter(int health, int strength, int dexterity, int level)
+        public CommonCharacter(int health, int strength, int dexterity, int level, Random rng)
         {
             this.health = health;
             this.strength = strength;
             this.dexterity = dexterity;
             this.level = level;
+            this.rng = rng;
         }
 
         // Properties
@@ -46,5 +47,6 @@ namespace HW5_Character_Behaviors
         {
             get { return rng; }
         }
+
     }
 }

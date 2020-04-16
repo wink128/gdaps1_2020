@@ -14,9 +14,11 @@ namespace HW5_Character_Behaviors
     {
         static void Main(string[] args)
         {
+            Random rng = new Random();
+
             Console.WriteLine("Wizard Vs. Rogue \nWelcome to the battle!");
-            Wizard wiz = new Wizard(60, 4, 3, 7, 2, 2);
-            Rogue rog = new Rogue(40, 4, 3, 8, 6, 5);
+            Wizard wiz = new Wizard(40, 4, 3, 7, 2, 2, rng);
+            Rogue rog = new Rogue(50, 4, 9, 8, 6, 5, rng);
 
             // Char stats
             Console.WriteLine(wiz.ToString());  // wizard
@@ -31,7 +33,7 @@ namespace HW5_Character_Behaviors
             while (wiz.IsDead() == false && rog.IsDead() == false && wiz.HasFled() == false && rog.HasFled() == false)
             {
                 // scroll speed
-                System.Threading.Thread.Sleep(500);
+                System.Threading.Thread.Sleep(900);
 
                 // damage update
                 wizAtk = wiz.Attack();

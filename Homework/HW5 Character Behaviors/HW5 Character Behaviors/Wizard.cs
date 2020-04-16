@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HW5_Character_Behaviors
 {
+    /// <summary>
+    /// Wizard child class (common character base class)
+    /// </summary>
     class Wizard : CommonCharacter
     {
         private int spellsLearned;
@@ -13,8 +16,8 @@ namespace HW5_Character_Behaviors
         private int bonusDamage;
 
         // constructor
-        public Wizard(int health, int strength, int dexterity, int level, int spellsLearned, int mastery)
-            : base(health, strength, dexterity, level)
+        public Wizard(int health, int strength, int dexterity, int level, int spellsLearned, int mastery, Random rng)
+            : base(health, strength, dexterity, level, rng)
         {
             this.spellsLearned = spellsLearned;
             this.mastery = mastery;
@@ -22,15 +25,23 @@ namespace HW5_Character_Behaviors
         }
 
         // ToString Override
+        /// <summary>
+        /// Print wizard's stat's to the console
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
 
-            return "The Wizard has " + health + " health , " + strength + " strength, and " +
-                dexterity + " dexterity. " + " They are level " + Level + "and currently know " + 
-                spellsLearned + " spells and have level " + mastery + " mastery, allowing them to do " + bonusDamage + " bonus damage.";
+            return "The Wizard has " + health + " health, " + strength + " strength, and " +
+                dexterity + " dexterity.\n" + "They are level " + Level + " , currently know " + 
+                spellsLearned + " spells, and have " + mastery + " mastery points, \nallowing them to do " + bonusDamage + " bonus damage.";
         }
 
         // attack method
+        /// <summary>
+        /// Generates an attack based on strength dexterity and bonus damage
+        /// </summary>
+        /// <returns></returns>
         public int Attack()
         {
             int attack = (RNG.Next(0, strength) * dexterity) + bonusDamage;
@@ -38,6 +49,10 @@ namespace HW5_Character_Behaviors
         }
 
         // take damage method
+        /// <summary>
+        /// Reduces health based on damage taken
+        /// </summary>
+        /// <param name="damage"></param>
         public void TakeDamage(int damage)
         {
             
@@ -45,6 +60,10 @@ namespace HW5_Character_Behaviors
         }
 
         // HasFled()
+        /// <summary>
+        /// Flees depending on remaining health
+        /// </summary>
+        /// <returns></returns>
         public bool HasFled()
         {
             if (health > 10)
@@ -62,6 +81,10 @@ namespace HW5_Character_Behaviors
         }
 
         // IsDead()
+        /// <summary>
+        /// Evaluates if player is dead or not
+        /// </summary>
+        /// <returns></returns>
         public bool IsDead()
         {
             if (health <= 0)
