@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{773CE999-4BFC-44E9-AC98-60490054F1F9}</ProjectGuid>
+    <ProjectGuid>{A4AF1192-DF22-4E0D-8307-E1F80312AE01}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>HW4_Analyzing_Monopoly</RootNamespace>
-    <AssemblyName>HW4 Analyzing Monopoly</AssemblyName>
+    <RootNamespace>Exceptions</RootNamespace>
+    <AssemblyName>Exceptions</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dice.cs" />
-    <Compile Include="Monopoly.cs" />
+    <Compile Include="CustomList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
