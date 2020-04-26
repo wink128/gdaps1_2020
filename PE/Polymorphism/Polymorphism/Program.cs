@@ -20,6 +20,10 @@ namespace Polymorphism
             for (int i = 0; i < 10; i++)
             {
                 list.Add(myBarracks.SpawnCharacter("character " + (i+1), rng.Next(21), rng.Next(21), rng.Next(21)));
+                if (list[i]is Thief)
+                {
+                    
+                }
             }
 
             // this is supposed to print the stats but its not printing anything

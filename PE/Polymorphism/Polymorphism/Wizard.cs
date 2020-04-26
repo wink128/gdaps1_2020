@@ -19,6 +19,7 @@ namespace Polymorphism
             : base(name, strength, dexterity, intelligence)
         {
             this.hotPocketPercentage = hotPocketPercentage;
+            Console.WriteLine("Wizard is spawned.");
         }
 
         // property

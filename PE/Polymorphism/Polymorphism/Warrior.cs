@@ -19,6 +19,7 @@ namespace Polymorphism
             : base(name, strength, dexterity, intelligence)
         {
             this.daysSinceLastBath = daysSinceLastBath;
+            Console.WriteLine("Warrior is spawned.");
         }
 
         // property 

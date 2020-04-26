@@ -19,6 +19,7 @@ namespace Polymorphism
             : base(name, strength, dexterity, intelligence)
         {
             this.cellPhoneRings = cellPhoneRings;
+            Console.WriteLine("Thief is spawned.");
         }
 
         // property

@@ -20,12 +20,6 @@ namespace Polymorphism
             this.rng = rng;
         }
         
-        // property
-        public Random RNG
-        {
-            get { return rng; }
-        }
-
         // method
         /// <summary>
         /// Actually spawns in a random RPG Character type
