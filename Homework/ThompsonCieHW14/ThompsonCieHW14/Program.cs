@@ -14,7 +14,7 @@ namespace ThompsonCieHW14
         static void Main(string[] args)
         {
             User newUser = new User();
-            
+
             
         }
     }

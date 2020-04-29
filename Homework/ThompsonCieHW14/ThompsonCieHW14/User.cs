@@ -13,7 +13,7 @@ namespace ThompsonCieHW14
     {
         // attributes
         string username;
-        string[] randomNames;
+        string[] randomNames = new string[] { "Mio", "Ace", "Chad" };
         Random rng;
 
         // property
@@ -24,8 +24,8 @@ namespace ThompsonCieHW14
             {
                 if (string.IsNullOrEmpty(username))
                 {
-                    Console.WriteLine("\nName not entered. Your new name is Mio.");
-                    username = "Mio";
+                    Console.WriteLine("\nName not entered. Your name will be randomized.");
+                    this.username = randomNames[rng.Next(3)];
                 }
                 else this.username = value;
             }
@@ -43,7 +43,10 @@ namespace ThompsonCieHW14
         /// </summary>
         public string UserInput()
         {
-            return "placeholder";
+            Console.Write("How would you like me to count text?\n1) You will ENTER it" +
+                "\n2) You have a FILE with text in it\n3) QUIT ");
+            string choice = Console.ReadLine().Trim().ToLower();
+            return choice;
         }
 
         /// <summary>
@@ -60,10 +63,22 @@ namespace ThompsonCieHW14
         /// </summary>
         /// <param name="myList"></param>
         /// <param name="phrase"></param>
-        public void DisplayData(List<string> myList, string phrase)
+        public void DisplayData(List<string> alphList, List<int> numList, string[] phrase)
         {
             // if counter list > 0 display data
             // do not display otherwise
+            for (int i=0; i<phrase.Length; i++)
+            {
+                if (numList[i] > 0)
+                {
+                    Console.ForegroundColor = (ConsoleColor)rng.Next(16);
+                    Console.WriteLine("The letter {0} was found {1} time(s)", numList[i], alphList[i]);
+                }
+                else
+                {
+                    continue;
+                }
+            }
 
             // pick random text color
         }
