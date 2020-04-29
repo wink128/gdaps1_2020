@@ -105,7 +105,7 @@ namespace HW3_Word_Scramble
                     }
                     else
                     {
-                        Console.WriteLine("\tIncorrect.");
+                        Console.WriteLine("\tfuck you.");
                         numGuesses++;
                     }
                 }
