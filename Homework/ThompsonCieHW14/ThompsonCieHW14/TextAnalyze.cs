@@ -16,8 +16,27 @@ namespace ThompsonCieHW14
                                              "v", "w", "x", "y", "z" };
 
         static List<int> numberLetters = new List<int>();
-        static string[] phrase;
+        static string[] phrase = new string[1];
         User myUser = new User();
+
+        // property
+        static string[] Phrase
+        {
+            get { return phrase; }
+            set
+            {
+                if (phrase == null)
+                {
+                    while (phrase[1] == null)
+                    {
+                        Console.Write("Enter a phrase: ");
+                        phrase[1] = Console.ReadLine();
+                    }
+                    
+                }
+                else phrase = value;
+            }
+        }
 
         // methods
         /// <summary>
@@ -29,7 +48,7 @@ namespace ThompsonCieHW14
             Console.Write("Nice to meet you! What is your name? ");
             string name = Console.ReadLine().Trim();
 
-            Console.WriteLine("\nMy goal in this program is to count the letters in a phrase.");
+            Console.WriteLine("My goal in this program is to count the letters in a phrase.");
             
             return name;
         }

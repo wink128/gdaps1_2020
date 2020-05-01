@@ -43,8 +43,8 @@ namespace ThompsonCieHW14
         /// </summary>
         public string UserInput()
         {
-            Console.Write("How would you like me to count text?\n1) You will ENTER it" +
-                "\n2) You have a FILE with text in it\n3) QUIT ");
+            Console.WriteLine("How would you like me to count text?\n1) You will ENTER it" +
+                "\n2) You have a FILE with text in it\n3) QUIT");
             string choice = Console.ReadLine().Trim().ToLower();
             return choice;
         }

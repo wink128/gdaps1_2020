@@ -15,7 +15,12 @@ namespace ThompsonCieHW14
         {
             User newUser = new User();
 
-            
+            string name = TextAnalyze.Welcome();
+            newUser.UserName = name;
+            Console.WriteLine();
+            newUser.UserInput();
+            TextAnalyze.ReadText();
+            TextAnalyze.Counter();
         }
     }
 }
